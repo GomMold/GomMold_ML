@@ -5,6 +5,15 @@ The system is built using **YOLOv8**, trained on a custom **Roboflow dataset**, 
 
 ---
 
+## Training Notebook
+
+All training code, configuration settings, and evaluation outputs are documented in the training notebook:
+
+🔗 **Training Notebook (`GomMold_ML.ipynb`)**  
+https://github.com/GomMold/GomMold_ML/blob/3c9afa751b775e8e4ab3505b909dae3430e27480/training/GomMold_ML.ipynb
+
+---
+
 ## Model Weights
 
 The trained YOLOv8 model is not stored directly in the repository because the `.pt` file exceeds GitHub’s size limit.  
