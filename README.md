@@ -22,7 +22,9 @@ Instead, you can download the final trained model from the release page:
 🔗 **Download Model (`new_best3.pt`):**  
 https://github.com/GomMold/GomMold_ML/releases/download/v1.0/new_best3.pt
 
-🔗 **Download Model (`best_onnx`):**  
+Or you can download the .onnx file here : 
+
+🔗 **Download Model (`best.onnx`):**  
 https://firebasestorage.googleapis.com/v0/b/gommold-c6654.firebasestorage.app/o/models%2Fbest.onnx?alt=media&token=75667b68-4ed6-480a-895e-e9502ad5a95a
 
 After downloading the file, place it in your backend's model directory before running inference.
