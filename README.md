@@ -17,12 +17,12 @@ https://github.com/GomMold/GomMold_ML/blob/3c9afa751b775e8e4ab3505b909dae3430e27
 ## Model Weights
 
 The trained YOLOv8 model is not stored directly in the repository because the `.pt` file exceeds GitHub’s size limit.  
-Instead, you can download the final trained model from the release page:
+Instead, you can download the original trained weights from the release page:
 
 🔗 **Download Model (`new_best3.pt`):**  
 https://github.com/GomMold/GomMold_ML/releases/download/v1.0/new_best3.pt
 
-Or you can download the .onnx file here : 
+Or download the optimized for deployment model here:
 
 🔗 **Download Model (`best.onnx`):**  
 https://firebasestorage.googleapis.com/v0/b/gommold-c6654.firebasestorage.app/o/models%2Fbest.onnx?alt=media&token=75667b68-4ed6-480a-895e-e9502ad5a95a
