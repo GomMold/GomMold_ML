@@ -3,8 +3,6 @@
 This repository contains the machine learning components used to train and deploy the GomMold mold detection model.  
 The system is built using **YOLOv8**, trained on a custom **Roboflow dataset**, and exported to **ONNX** for backend inference.
 
----
-
 ## Training Notebook
 
 All training code, configuration settings, and evaluation outputs are documented in the training notebook:
@@ -12,24 +10,19 @@ All training code, configuration settings, and evaluation outputs are documented
 🔗 **Training Notebook (`GomMold_ML.ipynb`)**  
 https://github.com/GomMold/GomMold_ML/blob/3c9afa751b775e8e4ab3505b909dae3430e27480/training/GomMold_ML.ipynb
 
----
-
 ## Model Weights
 
-The trained YOLOv8 model is not stored directly in the repository because the `.pt` file exceeds GitHub’s size limit.  
-Instead, you can download the original trained weights from the release page:
+The GomMold model was originally trained using YOLOv8 in PyTorch (.pt), but for deployment purposes it was exported to ONNX (.onnx) to ensure better compatibility and performance in our production environment. While the .pt file contains the full PyTorch training weights, it exceeds GitHub’s size limits and is not ideal for lightweight cloud deployment. The ONNX version, however, offers a more optimized, framework-agnostic format that runs efficiently on platforms like Railway, making it easier to load, faster to infer, and more portable across different environments.
+
+You can download both versions below:
 
 🔗 **Download Model (`new_best3.pt`):**  
 https://github.com/GomMold/GomMold_ML/releases/download/v1.0/new_best3.pt
-
-Or download the optimized for deployment model here:
 
 🔗 **Download Model (`best.onnx`):**  
 https://firebasestorage.googleapis.com/v0/b/gommold-c6654.firebasestorage.app/o/models%2Fbest.onnx?alt=media&token=75667b68-4ed6-480a-895e-e9502ad5a95a
 
 After downloading the file, place it in your backend's model directory before running inference.
-
----
 
 ## Dataset Information
 
@@ -41,14 +34,11 @@ The dataset contains **1,134 household images** across **two classes**:
 | 0        | Mold       |
 | 1        | No Mold    |
 
----
+**🔗 Dataset Link** 
 
-### 🔗 Dataset Source
-
-Roboflow Project Page:  
+GomMold Roboflow Project Page:  
 https://universe.roboflow.com/gommold-8opye/mold_detection_gommold-if0p0
 
----
 
 ### Dataset Version
 
@@ -67,13 +57,9 @@ mold_detection_gommold-v4/
 Images were resized to **640×640**, following YOLOv8’s input requirements.  
 Annotations follow the **YOLO TXT (normalized bounding box)** format.
 
-A portion of dataset images were sourced from:  
-https://universe.roboflow.com/dissertationproject/mould-detection-aaron  and 
-https://universe.roboflow.com/jisupark/wall-yqazk
+A portion of the dataset images used for training were sourced from publicly available datasets on Roboflow, including https://universe.roboflow.com/dissertationproject/mould-detection-aaron and https://universe.roboflow.com/jisupark/wall-yqazk as well as from freely accessible images obtained through Google Search.
 
 Additional images were manually collected and labeled for improved performance.
-
----
 
 ## Dataset Download Options
 
